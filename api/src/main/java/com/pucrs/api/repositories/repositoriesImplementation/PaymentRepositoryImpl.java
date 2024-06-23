@@ -15,13 +15,13 @@ public class PaymentRepositoryImpl implements IPaymentRepository {
     }
 
     @Override
-    public List<Subscription> todos() {
+    public List<Payment> todos() {
         return paymentRep.findAll();
     }
    
    
     @Override
-    public Subscription acharPorId(Integer id) {
+    public Payment acharPorId(Integer id) {
         return paymentRep.findById(id).orElse(null);
     }
 

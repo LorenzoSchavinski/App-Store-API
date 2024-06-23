@@ -15,20 +15,20 @@ public class ClientRepositoryImpl implements IClientRepository {
     }
 
     @Override
-    public List<Subscription> todos() {
+    public List<Client> todos() {
         return clientRep.findAll();
     }
    
    
     @Override
-    public Subscription acharPorId(Integer id) {
+    public Client acharPorId(Integer id) {
         return clientRep.findById(id).orElse(null);
     }
 
 
     @Override
-    public Client cadastrar(Client c){
-        return clientRep.save(c);
+    public cadastrar(Client c) {
+        clientRep.save(c);
     }
 
 

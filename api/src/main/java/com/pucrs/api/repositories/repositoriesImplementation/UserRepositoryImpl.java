@@ -13,12 +13,12 @@ public class UserRepositoryImpl implements IUserRepository {
     }
 
     @Override
-    public List<Subscription> todos() {
+    public List<User> todos() {
         return userRep.findAll();
     }
 
     @Override
-    public Subscription acharPorId(Integer id) {
+    public User acharPorId(Integer id) {
         return userRep.findById(id).orElse(null);
     }
 
